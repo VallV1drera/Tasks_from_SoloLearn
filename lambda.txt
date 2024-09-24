@@ -1,0 +1,6 @@
+price = int(input()) 
+perc = int(input()) 
+ 
+res = (lambda x,y:(price*perc)/100)(price, perc) 
+ 
+print(res)
