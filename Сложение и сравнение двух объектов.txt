@@ -1,0 +1,34 @@
+class Shape:
+    def __init__(self, w, h):
+        self.width = w
+        self.height = h
+
+    def area(self):
+        return self.width * self.height
+
+    def __add__(self, other):
+        new_width = self.width + other.width
+        new_height = self.height + other.height
+        return Shape(new_width, new_height)
+
+    def __gt__(self, other):
+        return self.area() > other.area()
+
+# Принимаем ввод от пользователя
+w1 = int(input())
+h1 = int(input())
+w2 = int(input())
+h2 = int(input())
+
+# Создаем объекты Shape
+s1 = Shape(w1, h1)
+s2 = Shape(w2, h2)
+
+# Сложение объектов
+result = s1 + s2
+
+# Выводим площадь нового объекта
+print(result.area())
+
+# Сравнение объектов
+print(s1 > s2)
