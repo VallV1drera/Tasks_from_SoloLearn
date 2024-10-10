@@ -1,0 +1,17 @@
+class Player:
+    def __init__(self, name, level):
+        self.name = name
+        self.level = level
+
+    def intro(self):
+        print(self.name + " (Level " + self.level + ")")
+
+# Принимаем имя и уровень из пользовательского ввода
+name = input()
+level = input()
+
+# Создаем объект Player с введенными значениями
+player = Player(name, level)
+
+# Вызываем метод intro() для объекта player
+player.intro()
