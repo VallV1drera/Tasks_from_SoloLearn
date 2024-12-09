@@ -1,0 +1,22 @@
+def sum_of_positives(arr):
+    total_sum = 0
+
+    # Проходим по каждому элементу массива
+    for num in arr:
+        # Если элемент положительный, добавляем его к сумме
+        if num > 0:
+            total_sum += num
+
+    # Возвращаем сумму
+    return total_sum
+
+# Запрашиваем у пользователя ввод массива чисел
+user_input = input("Введите числа через пробел: ")
+
+# Преобразуем введенные данные в массив чисел
+try:
+    numbers = list(map(int, user_input.split()))
+    result = sum_of_positives(numbers)
+    print(f"Сумма всех положительных чисел: {result}")
+except ValueError:
+    print("Пожалуйста, введите корректные числа через пробел.")
